@@ -10,7 +10,7 @@ import SwiftUI
 struct Category: Identifiable {
     let id = UUID()
     let title: String
-    let systemImage: String?
+    let systemImage: String
 }
 
 struct PodcastCategoriesView: View {
@@ -28,7 +28,7 @@ struct PodcastCategoriesView: View {
             HStack(spacing: 12) {
                 ForEach(categories) { category in
                     HStack(spacing: 8) {
-                        Image(systemName: category.systemImage!)
+                        Image(systemName: category.systemImage)
                             .font(.subheadline)
                         Text(category.title)
                             .font(.subheadline.weight(.medium))
