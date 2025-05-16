@@ -28,7 +28,7 @@ struct PodcastCategoriesView: View {
             HStack(spacing: 12) {
                 ForEach(categories) { category in
                     HStack(spacing: 8) {
-                        Image(systemName: category.systemImage!)
+                        Image(systemName: category.systemImage ?? "waghnakh")
                             .font(.subheadline)
                         Text(category.title)
                             .font(.subheadline.weight(.medium))
